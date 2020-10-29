@@ -1,0 +1,12 @@
+server:
+  port: 8090
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db_article?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    username: root
+    password: zw123
+mybatis:
+  config-location: classpath:mybaits/Mapperconfig.xml
+  mapper-locations: classpath:mybaits/mapping/*.xml  #注意：一定要对应mapper映射xml文件的所在路径
+  type-aliases-package: com.zwzs2016.github.entity  # 注意：对应实体类的路径
