@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zwzs2016.github.dao.UserDao">
+    <!--    查询所有操作-->
+    <select id="isexist" resultType="java.lang.Boolean" parameterType="String">
+        SELECT count(id) FROM user where username=#{username}
+    </select>
+    <insert id="insertuser" parameterType="User">
+        INSERT INTO user(`username`,`password`,`createtime`,`lock`) values(#{username},#{password},#{createtime},#{lock})
+    </insert>
+    <select id="islogin" resultType="java.lang.Boolean" parameterType="String">
+        SELECT count(id) FROM user where username=#{username} AND password=#{password}
+    </select>
+</mapper>

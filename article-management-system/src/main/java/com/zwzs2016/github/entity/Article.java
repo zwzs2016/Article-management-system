@@ -6,8 +6,8 @@ import java.util.Date;
 
 @Data
 public class Article {
-    private Integer id;
     private String title;
+    private String type;
     private String content;
     private String auth;
     private Date createtime;
