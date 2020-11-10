@@ -5,9 +5,9 @@ import lombok.Data;
 import java.sql.Date;
 
 @Data
-public class User {
+public class Administrator {
     private String username;
-    private String password;
+    private String operation;
     private Date createtime;
-    private boolean lock;
+    private String state;
 }

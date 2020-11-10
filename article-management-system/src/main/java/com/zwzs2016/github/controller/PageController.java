@@ -1,8 +1,10 @@
 package com.zwzs2016.github.controller;
 
 import com.zwzs2016.github.entity.Article;
+import com.zwzs2016.github.entity.Comment;
 import com.zwzs2016.github.entity.User;
 import com.zwzs2016.github.service.ArticleService;
+import com.zwzs2016.github.service.CommentService;
 import com.zwzs2016.github.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
@@ -19,6 +21,8 @@ public class PageController {
     ArticleService articleService;
     @Autowired
     UserService userService;
+    @Autowired
+    CommentService commentService;
     @GetMapping("/article")
     public ModelAndView article(){
         List<Article> articlelist = articleService.selectAll();
@@ -119,5 +123,12 @@ public class PageController {
         article.setContent(content);
         article.setAuth(auth);
         return articleService.update(article);
+    }
+    @GetMapping("/commentselect")
+    public Map<String,List> commentselect(String title,String username){
+        Map<String,List> map=new HashMap<>();
+        List<Comment> select = commentService.select(title,username);
+        map.put("values",select);
+        return map;
     }
 }

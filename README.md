@@ -155,9 +155,7 @@ AUTO_INCREMENT=7;
 
 #### 前台部分展示:
 
-![image-20201103225827574](C:\Users\ZW\AppData\Roaming\Typora\typora-user-images\image-20201103225827574.png)
-
-​				
+![image-20201103225821668](C:\Users\ZW\AppData\Roaming\Typora\typora-user-images\image-20201103225821668.png)		
 
 ![image-20201103225917782](C:\Users\ZW\AppData\Roaming\Typora\typora-user-images\image-20201103225917782.png)
 

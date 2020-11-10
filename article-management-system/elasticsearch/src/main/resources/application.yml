@@ -1,0 +1,7 @@
+spring:
+  data:
+    elasticsearch:
+      cluster-name: my-application
+      cluster-nodes: 127.0.0.1:9300 # 程序连接es的端口号是9300
+elasticsearch:
+  ip: localhost:9200

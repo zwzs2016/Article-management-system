@@ -5,9 +5,9 @@ import lombok.Data;
 import java.sql.Date;
 
 @Data
-public class User {
+public class Comment {
     private String username;
-    private String password;
+    private String contents;
+    private Integer likenum;
     private Date createtime;
-    private boolean lock;
 }
